@@ -1031,6 +1031,8 @@ messages.forEach(message -&gt; logger.info(message.getPubsubMessage().getData().
        			Boolean returnImmediately)</p></th>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Pulls a number of messages from a subscription, allowing for the retry settings to be configured.
        			Any messages received by <code>pull()</code> are not automatically acknowledged. See <a href="#acknowledging-messages">Acknowledging messages</a>.</p>
+<p class="tableblock">				The <code>maxMessages</code> parameter is the maximum limit of how many messages to pull from a subscription in a single call; this value <strong>must</strong> be greater than 0.
+				You may omit this parameter by passing in <code>null</code>; this means there will be no limit on the number of messages pulled (<code>maxMessages</code> will be <code>Integer.MAX_INTEGER</code>).</p>
 <p class="tableblock">       			If <code>returnImmediately</code> is <code>true</code>, the system will respond immediately even if it there are no messages available to return in the <code>Pull</code> response. Otherwise, the system may wait (for a bounded amount of time) until at least one message is available, rather than returning no messages.</p></td>
 </tr>
 <tr>
