@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.8">
-<meta name="author" content="João André Martins, Jisha Abubaker, Ray Tsang, Mike Eltsufin, Artem Bilan, Andreas Berger, Balint Pato, Chengyuan Zhao, Dmitry Solomakha, Elena Felder, Daniel Zou">
+<meta name="author" content="João André Martins, Jisha Abubaker, Ray Tsang, Mike Eltsufin, Artem Bilan, Andreas Berger, Balint Pato, Chengyuan Zhao, Dmitry Solomakha, Elena Felder, Daniel Zou, Eddú Meléndez">
 <title>Spring Cloud GCP</title>
 <link rel="stylesheet" href="css/spring.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -105,7 +105,7 @@ $(addBlockSwitches);
 <span id="author8" class="author">Chengyuan Zhao</span><br>
 <span id="author9" class="author">Dmitry Solomakha</span><br>
 <span id="author10" class="author">Elena Felder</span><br>
-<span id="author11" class="author">Daniel Zou</span><br>
+<span id="author11" class="author">Daniel Zou, Eddú Meléndez</span><br>
 </div>
 <div id="toc" class="toc2">
 <div id="toctitle">Table of Contents</div>
@@ -9141,6 +9141,18 @@ If you would like to append a prefix string to all property names imported from 
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>spring.cloud.gcp.secretmanager.secret-name-prefix</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A prefix string to prepend to the property names of secrets read from Secret Manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"" (empty string)</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spring.cloud.gcp.secretmanager.version</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a specific version of secrets to read from Secret Manager</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">"latest"</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>spring.cloud.gcp.secretmanager.versions.&lt;secret-id&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Defines a version for a specific secret-id to read from Secret Manager. It will take precedence over <code>spring.cloud.gcp.secretmanager.version</code> if both are specified</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">"" (empty string)</p></td>
 </tr>
